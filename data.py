@@ -5,6 +5,7 @@ from torch.utils.data import DataLoader
 from torchvision import datasets,transforms
 from torchvision.transforms import ToTensor, Lambda, Compose
 import matplotlib.pyplot as plt
+from train import *
 
 training_data = datasets.FashionMNIST(
     root='data',  # root directory where images are gonna be downloaded
@@ -25,7 +26,7 @@ test_data = datasets.FashionMNIST(
     transform=ToTensor(),
 )
 
-batch_size = 64
+
 train_dataloader = DataLoader(training_data, batch_size=batch_size)
 test_dataloader = DataLoader(test_data, batch_size=batch_size)
 
